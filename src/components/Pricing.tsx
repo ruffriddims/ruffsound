@@ -1,19 +1,18 @@
-import { useState, useEffect } from 'react';
-import { ArrowLeft, Calculator, Music, Disc, Zap, Check, Info } from 'lucide-react';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { ArrowLeft, Calculator, Music, Disc, Zap, Check, Info } from 'lucide-react'
 
-type Page = 'home' | 'pricing' | 'upload' | 'options' | 'payment';
+type Page = 'home' | 'pricing' | 'upload' | 'options' | 'payment'
 
 interface PricingProps {
-  navigateTo: (page: Page) => void;
+  navigateTo: (page: Page) => void
 }
 
-interface Rate {
   label: string;
   price: number;
   perSong?: boolean;
   description: string;
-}
-
+import { cn } from '@/lib/utils'
 const mixingRates: Record<string, Rate> = {
   single: { label: 'Single Song', price: 350, description: 'One song, up to 24 stems' },
   ep: { label: 'EP (3-5 songs)', price: 300, perSong: true, description: 'Per song rate' },

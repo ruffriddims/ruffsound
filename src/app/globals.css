@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.metallic-text {
+  background: linear-gradient(45deg, #c0c0c0, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.animate-expo-out {
+  animation: expo-out 0.7s ease-out forwards;
+}
+
+@keyframes expo-out {
+  0% { opacity
